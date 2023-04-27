@@ -6,7 +6,7 @@ export const PokemonImage = ({ id, name }: { id: number; name: string }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/name/${id}`);
+    router.push(`/name/${name}`);
   };
   return (
     <Grid key={id} xs={6} sm={3} md={2} xl={1} onClick={handleClick}>

@@ -32,7 +32,8 @@ export const getStaticProps: GetServerSideProps = async (ctx) => {
 
   //https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg
 
-  const pokemons = data.results.map((_, idx) => ({
+  const pokemons = data.results.map((pokemon, idx) => ({
+    name: pokemon.name,
     id: idx + 1,
     img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
       idx + 1
